@@ -11,5 +11,5 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           working-directory: ./wp-content/themes/defaulttheme/
-      - run: npm t
+      - run: npm install
         working-directory: ./wp-content/themes/defaulttheme/
