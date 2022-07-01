@@ -1,21 +1,14 @@
-name: npm-install-and-build
-on: [push, pull_request]
+name: npm-install
+on: [push]
 jobs:
-  npm-install-and-build:
+  npm-install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - name: npm install and build
-      - run: |
-          npm install
-          npm run dev --if-present
+      - run: npm install
         working-directory: wp-content/themes/defaulttheme/
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist
-          path: |
-            wp-content/themes/defaulttheme/dist
+      - run: npm run dev
+        working-directory: wp-content/themes/defaulttheme/
