@@ -11,4 +11,4 @@ jobs:
       - name: npm install
         working-directory: wp-content/themes/defaulttheme/
         run: |
-          npm install
+          npm ci
