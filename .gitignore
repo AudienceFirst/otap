@@ -1,0 +1,6 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+wp-content/themes/defaulttheme/dist
+wp-content/themes/defaulttheme/node_modules
+wp-content/themes/defaulttheme/npm-debug.log
+wp-content/themes/defaulttheme/mix-manifest.json
