@@ -1,0 +1,45 @@
+.text-image-withtitle {
+    .row{
+        display: flex;
+        //align-items: center;
+
+        .image-column {
+            //padding: 0 106px;
+
+            .title {
+                color: $color--secondary;
+                margin-bottom: 24px;
+            }
+
+            img {
+                margin-top: 64px;
+                max-width: 200px;
+            }
+        }
+
+        .max-width-column {
+            //padding-right: 106px;
+            .textarea{
+                p {
+                    font-size: 18px;
+                    line-height: 1.5;
+                    color: $color--secondary;
+                    margin-bottom: 24px;
+                    display: block;
+                    font-family: $theme-font-secondary;
+
+                    strong {
+                        font-size: 24px;
+                        line-height: 1.5;
+                        color: $color--secondary;
+                        font-family: $theme-font-secondary;
+                    }
+                }
+            }
+
+            a {
+                margin-top: 48px;
+            }
+        }
+    }
+}

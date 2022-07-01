@@ -1,0 +1,168 @@
+/* BUTTONS */
+button,
+a.btn,
+button.btn{
+	display: flex;
+	align-items: center;
+	background-color: $color--primary;
+    padding: 14px 32px 14px 32px;
+    -webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	box-shadow: none !important; 
+	transition: all .3s ease-in-out;
+	margin: 0px 0px 0px 0px;
+	width: max-content;
+	border: 2px solid $color--primary;
+	@media only screen and (max-width: 767px) {
+		padding: 10px 24px 10px 24px;
+	}
+	svg{
+		height: 16px;
+		width: 16px;
+		margin-left: 40px;
+		transform-origin: 50% 50%;
+		transition: all .3s;
+		transition-timing-function: $smoothInOut;
+		&.play-icon{
+			height: 20px;
+			width: 20px;
+		}
+		&.rotate-arrow{
+			height: 12px;
+			width: 12px;
+			g{
+				fill: $color--secondary;
+			}
+		}
+	}
+	span{
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 700;
+		color: $color-white;
+		display: inline;
+		font-family: $theme-font-secondary;
+	}
+	&:hover,
+	&:focus{
+		cursor: pointer;
+		border-color: $color--primary;
+		background-color: transparent;
+		span{
+			text-decoration: underline;
+			color: $color--primary;
+		}
+		svg{
+			&.play-icon{
+				transform: translateX(2px);
+			}
+			&.rotate-arrow{
+				transform: rotate(45deg);
+				/* doesn't work as intended in Firefox 
+				* % values are taken relative to the SVG, not the element
+				* which actually seems to be correct */
+				transform-origin: 50% 50%;
+			}
+		}
+	}
+	&.btn-secondary{
+		background-color: $color--secondary;
+		padding: 17px 20px 17px 25px;
+		&:hover,
+		&:focus{
+			background-color: $color--secondary--hover;
+		}
+		span{
+			color: $color-white;
+		}
+		svg{
+			g{
+				fill: $color-white;
+			}
+		}
+		&:hover,
+		&:focus{
+			svg{
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&.ghost-btn{
+		background-color: transparent;
+		border-radius: 30px;
+		-moz-border-radius: 30px;
+		-webkit-border-radius: 30px;
+		span{
+			font-family: $theme-font-secondary;
+			font-size: $font-size-xs;
+			font-weight: 600;
+			color: $color--primary;
+			line-height: 26px;
+			text-align: center;
+		}
+		&:hover,
+		&:focus{
+			cursor: pointer;
+			border-color: $color--primary;
+			background-color: $color--primary;
+			span{
+				text-decoration: underline;
+				color: $color-white;
+			}
+		}
+	}
+	&.white-btn{
+		border: 2px solid $color-white;
+		background-color: $bg-color-white;
+		span{
+			color: #321457;
+		}
+	}
+
+	&.btn-icon {
+		background-color: transparent;
+		transition: all .3s;
+		transition-timing-function: $smoothInOut;
+		padding: 0px;
+		border: 0px;
+		svg {
+			margin-left: 0;
+			margin-right: 12px;
+		}
+
+		span {
+			color: $color--secondary;
+			font-family: $theme-font-secondary;
+			font-weight: 500;
+			font-size: $font-size-xxs;
+			line-height: 24px;
+			text-transform: unset;
+			transition: all .3s;
+			transition-timing-function: $smoothInOut;
+		}
+		&:hover,
+		&:focus{
+			span{
+				color: $color--primary;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.btn-group-horizontal{
+	display: flex;
+	align-items: center;
+	.btn{
+		margin-right: 18px;
+	}
+}
+
+.back-to-top {
+	span {
+		font-size: 14px;
+		color: $color-white;
+		transition: all;
+	}
+}

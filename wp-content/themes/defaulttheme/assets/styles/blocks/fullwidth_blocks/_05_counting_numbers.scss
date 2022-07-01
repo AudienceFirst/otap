@@ -1,0 +1,63 @@
+.counting-numbers{
+    background: #00264E;
+    color: $color-white;
+    .container {
+        max-width: calc(1240px + 24px);
+        .row{
+            display: flex;
+            align-items: flex-start;
+            padding-left: 12px;
+            padding-right: 12px;
+            &.counting-wrapper{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            h4 {
+                color: #ffffff;
+            }
+    
+            // bootstrap columns
+            .single-counting {
+                display: flex;
+                flex-direction: column;
+                @media only screen and (max-width: 1200px) {
+                    margin-bottom: 60px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+                img {
+                    max-width: 62px;
+                    margin-bottom: 32px;
+                }
+                .number-wrapper {
+                    margin-bottom: 24px; 
+                    display: flex;
+                    align-items: flex-start;
+                    span {
+                        font-weight: 600;
+                        font-size: $font-size-xxxxxl;
+                        line-height: 60px;
+                        color: $color-white;
+                    }
+        
+                    sup {
+                        font-weight: 600;
+                        font-size: 40px;
+                        line-height: 40px;
+                        color: $color--primary;
+                        top: 0px;
+                        margin-left: 8px;
+                    }
+                }
+                .counting-description {
+                    font-family: $theme-font-secondary;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: $color-white;
+                    letter-spacing: 0;
+                }
+            }
+        } 
+    }
+}

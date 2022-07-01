@@ -1,0 +1,305 @@
+$theme-font: "Kanit";
+$theme-font-normal: "Kanit";
+$theme-font-bold: "Kanit";
+$theme-font-black: "Kanit";
+$theme-font-secondary: "Roboto";
+
+$text-base-size: 22px;
+$text-base-ratio: 1.18;
+
+$font-size-xxxxxxxxl: 90px;
+$font-size-xxxxxxxl: 72px;
+$font-size-xxxxxxl: 68px;
+$font-size-xxxxxl: 64px;
+$font-size-xxxxl: 56px;
+$font-size-xxxl: 50px;
+$font-size-xxl: 46px;
+$font-size-xl: 40px;
+$font-size-l: 36px;
+$font-size-ml: 32px;
+$font-size-m: 28px;
+$font-size-s: 24px;
+$font-size-xs: 18px;
+$font-size-xxs: 16px;
+$font-size-xxxs: 14px;
+$font-size-xxxxs: 12px;
+$font-size-xxxxxs: 8px;
+
+
+$line-height-ratio-xl: 1.9;
+$line-height-ratio-l: 1.6;
+$line-height-ratio-m: 1.3;
+$line-height-ratio-s: 1.15;
+$line-height-ratio-xs: 1;
+$line-height-ratio-xxs: 0.5;
+
+$m-line-height-ratio-l: 1.5;
+$m-line-height-ratio-m: 1.4;
+$m-line-height-ratio-s: 1.3;
+$m-line-height-ratio-xs: 1.1;
+
+
+$font-weight-book: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1{
+    font-family: $theme-font;
+    font-size: 56px;
+    color: #00264E;
+    letter-spacing: 0;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-family: $theme-font;
+    font-size: 40px;
+    color: #00264E;
+    letter-spacing: 0;
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  h3{
+    font-family: $theme-font;
+    font-size: 36px;
+    color: #00264E;
+    letter-spacing: 0;
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  h4{
+    font-family: $theme-font;
+    font-size: 32px;
+    color: #00264E;
+    letter-spacing: 0;
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  h5{
+    font-size: $font-size-xs;
+    line-height: $line-height-ratio-l;
+  }
+
+  h6{
+    font-size: $font-size-xxs;
+    line-height: $line-height-ratio-s;
+  }
+
+  .big-tag-text h2,
+  .text-image-withtitle .title{
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+
+  .subtitle,
+  .subtitle p{
+    font-family: $theme-font-secondary;
+    font-size: 32px;
+    line-height: 1.6;
+    color: $color--secondary;
+    letter-spacing: 0;
+  }
+
+  .intro p,
+  .intro strong {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .textarea,
+  .textarea p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  @media only screen and (max-width: 991px) {
+    h1{
+      font-size: 48px;
+    }
+
+    h2,
+    .big-tag-text h2,
+    .text-image-withtitle .title{
+      font-size: 36px;
+      &.large{
+      }
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+
+    h4{
+      font-size: $font-size-s;
+      line-height: $m-line-height-ratio-m;
+    }
+
+    p,
+    h5,
+    .text-xs {
+      font-size: $font-size-xs;
+      line-height: $line-height-ratio-xl;
+    }
+
+    h6{
+      font-size: $font-size-xxs;
+      line-height: $m-line-height-ratio-s;
+    }
+
+    .intro p,
+    .intro strong {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .subtitle,
+    .subtitle p{
+      font-size: 28px;
+    }
+
+    .textarea,
+    .textarea p{
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  // Default -> mobile
+  @media only screen and (max-width: 767px) {
+    h1{
+      font-size: 40px;
+      line-height: 1.1;
+    }
+
+    h2,
+    .big-tag-text h2,
+    .text-image-withtitle .title{
+      font-size: 32px;
+      &.large{
+      
+      }
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    h4{
+      font-size: $font-size-s;
+      line-height: $m-line-height-ratio-m;
+    }
+
+    p,
+    h5,
+    .text-xs {
+      font-size: $font-size-xs;
+      line-height: $line-height-ratio-xl;
+    }
+
+    h6{
+      font-size: $font-size-xxs;
+      line-height: $m-line-height-ratio-s;
+    }
+
+    .intro p,
+    .intro strong {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .subtitle,
+    .subtitle p{
+      font-size: 24px;
+    }
+
+    .textarea,
+    .textarea p{
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  // .intro p,
+  // p.intro {
+  //   font-size: $font-size-s;
+  //   line-height: $line-height-ratio-l;
+  // }
+
+  // .subtitle{
+  //   font-size: $font-size-s;
+  //   line-height: 1.5;
+  //   color: $color-white;
+  // }
+
+  // .textarea,
+  // .textarea p{
+  //   font-size: $font-size-xs;
+  //   line-height: $line-height-ratio-xl;
+  // }
+
+} // END ROOT
+
+//
+// Colors
+//--------------------------------------------------------------------------
+.text-green,
+.green {
+  color: $color--secondary;
+}
+
+.text-tertiary-00 {
+  color: $color--secondary;
+}
+
+.text-white,
+.white {
+  color: $color-white;
+}
+
+.text-purple,
+.purple {
+  color: $color--primary;
+}
+
+body {
+  color: $color-gray;
+}
+
+h1 {
+  color: $color--primary;
+}
+
+h2,
+h3,
+h4 {
+  color: $color--secondary;
+}
+
+a {
+  color: $color--secondary;
+}
+
+p{
+  font-size: $font-size-xs;
+  line-height: $line-height-ratio-xl;
+}
+
+.intro p,
+p.intro {
+  font-size: $font-size-s;
+  line-height: $line-height-ratio-l;
+}

@@ -1,0 +1,101 @@
+.header_02 {
+    .container{
+        .row{
+            display: flex;
+            align-items: flex-start;
+            margin-top: -200px;
+            background-color: $bg-color-primary;
+            padding-top: 92px;
+            padding-bottom: 92px;
+            @media only screen and (max-width: 991px) {
+                margin-top: 0px;
+                .empty-space{
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 767px) {
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+            .title-column{
+                @media only screen and (min-width: 992px) {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+                h1{
+                    font-family: $theme-font;
+                    color: $color--secondary;
+                    margin-bottom: 12px;
+                }
+                .subtitle{
+                    p{
+                        font-family: $theme-font-secondary;
+                    }
+                    @media only screen and (max-width: 991px) {
+                        margin-bottom: 32px;
+                    }
+                    @media only screen and (max-width: 767px) {
+                        margin-bottom: 24px;
+                    }
+                }
+                
+                .chapeau{
+                    font-family: $theme-font-secondary;
+                    font-size: 18px;
+                    color: $color--primary;
+                    letter-spacing: 0;
+                    line-height: 27px;
+                }
+            }
+            .intro-column{
+                @media only screen and (min-width: 992px) {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+                .intro-text{
+                    p{
+                        font-family: $theme-font-secondary;
+                            color: $color--secondary;
+                            font-weight: 400;
+                            display: block;
+                            margin-bottom: 24px;
+                            @media only screen and (min-width: 992px) {
+                                font-size: 24px;
+                            }
+                        strong{
+                            font-family: $theme-font-secondary;
+                            color: $color--secondary;
+                            font-weight: 700;
+                            display: block;
+                            margin-bottom: 24px;
+                            @media only screen and (min-width: 992px) {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+                a{
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+.header_02_image{
+    background-size: cover;
+    background-position: center center;
+    .container{
+        .row{
+            height: 650px;
+            @media only screen and (max-width: 991px){
+                height: 400px;
+            }
+            @media only screen and (max-width: 767px){
+                height: 280px;
+            }
+            
+        }
+    }
+}
+

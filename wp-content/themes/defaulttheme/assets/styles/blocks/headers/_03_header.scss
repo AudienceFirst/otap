@@ -1,0 +1,73 @@
+.header_03 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 120px;
+    @media only screen and (max-width: 991px) {
+        margin-bottom: 110px;
+    }
+    .container{
+        max-width: calc(1240px + 24px);
+        padding-left: 12px;
+        padding-right: 12px;
+        .row{
+            display: flex;
+            align-items: center;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+            &.bg-image{
+                height: 720px;
+                @media only screen and (max-width: 991px) {
+                    height: 140px;
+                }
+                @media only screen and (max-width: 767px) {
+                    height: 100px;
+                }
+            }
+            &.overlay{
+                position: absolute;
+                bottom: -120px;
+                width: 100%;
+                @media only screen and (max-width: 991px) {
+                    position: relative;
+                    bottom: -110px;
+                    padding-right: 0px;
+                    padding-left: 0px;
+                    margin: 0px;
+                }
+                .text-block {
+                    align-self: flex-end;
+                    background-color:#E1EBEB;
+                    padding: 60px;
+                    @media only screen and (max-width: 991px) {
+                        padding: 48px 32px;
+
+                    }
+                    // transform: translateY(120px);
+        
+                    .title {
+                        line-height: 1.1;
+                        color: $color--secondary;
+                        margin-bottom: 32px;
+                        @media only screen and (max-width: 767px) {
+                            margin-bottom: 24px;
+                        }
+                    }
+        
+                    .subtitle {
+                        color: $color--secondary;
+                        margin-bottom: 40px;
+                        @media only screen and (min-width: 768px) {
+                            font-size: 24px;    
+                        }
+                    }
+        
+                    a {
+        
+                    }
+                }
+            }
+        }
+    }
+}
+

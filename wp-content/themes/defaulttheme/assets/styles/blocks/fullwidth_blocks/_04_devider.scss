@@ -1,0 +1,13 @@
+.devider{
+    .container{
+        max-width: calc(1240px + 24px);
+        .row{
+            display: flex;
+            align-items: center;
+            .devider-style {
+                height: 20px;
+                background-repeat: repeat-x;
+            }
+        }
+    } 
+}

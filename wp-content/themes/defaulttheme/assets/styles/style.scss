@@ -1,0 +1,566 @@
+/* REMOVE BEFORE PUBLISH */
+.wpml-ls-statics-footer,
+.otgs-development-site-front-end{
+	display: none !important;
+}
+/* REMOVE BEFORE PUBLISH */
+
+*, :after, :before {
+	box-sizing: border-box;
+	outline: 0;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: 100%;
+}
+::-moz-selection {
+	background: $color--primary;
+	color: $color-white;
+	text-shadow: none
+}
+::selection {
+	background: $color--primary;
+	color: $color-white;
+	text-shadow: none
+}
+a {
+	transition: all .2s $fade;
+	text-decoration: none;
+	&:focus {
+		// old && not accessibility proof: outline: none;
+		outline: 2px solid $color--primary;
+	}
+}
+
+*{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+*:focus {
+	outline: 2px solid $color--primary;
+}
+
+html, body {
+	background: $bg-color-primary;
+	&.page-template-page-content{
+		background: $bg-color-white;
+	}
+}
+
+.preload * {
+//   -webkit-transition: all .3s ease-in-out !important;
+//   -moz-transition: all .3s ease-in-out !important;
+//   -ms-transition: all .3s ease-in-out !important;
+//   -o-transition: all .3s ease-in-out !important;
+//   transition: all .3s ease-in-out !important;
+}
+#m {
+	padding-top: 106px;
+}
+
+/* GENERAL */
+.content-wrapper{
+	display: flex;
+    flex-flow: row wrap;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+/* DEFAULT CONTENT PAGE */
+.page-template-page-content,
+.page-template-page-contact,
+.single-careers{
+	.header-block{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 400px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media only screen and (max-width: 991px) {
+			height: 400px;
+		}
+		@media only screen and (max-width: 767px) {
+			height: 320px;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-image: linear-gradient(to right, $color--secondary, rgba(255,255,255,0));
+			width: 50%;
+			@media only screen and (max-width: 767px) {
+				width: 100%;
+			}
+		}
+		hr{
+			max-width: 85px;
+			width: 100%;
+			background-color: #ffcc00;
+			height: 2px;
+			opacity: 1;
+			margin-top: 48px;
+			margin-bottom: 0px;
+			@media only screen and (max-width: 767px) {
+				margin-top: 32px;
+			}
+		}
+	}
+	.default-content-section{
+		.content-row{
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-bottom: 160px;
+			@media only screen and (max-width: 991) {
+				margin-bottom: 100px;
+			}
+			@media only screen and (max-width: 767px) {
+				margin-bottom: 80px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 164px;
+				height: -webkit-fill-available;
+				background-image: url("/wp-content/themes/audiencefirst/dist/images/svg/ids-logo-content.svg");
+				background-repeat: no-repeat;
+				margin-left: calc(-82px + 7.5px);
+				z-index: 0;
+			}
+			.content-blocks{
+				z-index: 1;
+				background-color: $bg-color-white;
+				padding: 8.333%;
+				@media only screen and (max-width: 767px) {
+					padding: 40px calc(var(--bs-gutter-x) * 0.5);
+				}
+				.paragraph-block{
+					margin-bottom: 40px;
+					&:last-child{
+						margin-bottom: 0px;
+					}
+					strong{
+						display: inline-block;
+						margin-bottom: 10px;
+					}
+					ul{
+						list-style: disc;
+						list-style: inside;
+						margin-top: 0px;
+						padding-left: 20px;
+						@media only screen and (max-width: 767px) {
+							padding-left: 10px;
+						}
+						li{
+							padding-left: 25px;
+    						text-indent: -25px;
+							color: $color--secondary
+						}
+					}
+					p{
+						padding-bottom: 32px;
+						color: $color--secondary;
+						&:last-child{
+							padding-bottom: 0px;
+						}
+					}
+					h2{
+						&.small{
+							font-size: 22px;
+							line-height: 28px;
+							color: $color--secondary;
+							font-weight: $font-weight-semibold;
+						}
+					}
+				}
+			}
+			.sidebar{
+				padding: 0px;
+				margin-top: -104px;
+				@media only screen and (max-width: 991px) {
+					margin-top: 0px;
+					margin-bottom: 92px;
+				}
+				@media only screen and (max-width: 767px) {
+					margin-top: 0px;
+					margin-bottom: 64px;
+				}
+				.header{
+					background-color: $bg-color-secondary;
+					padding: 40px;
+					border-left: 5px solid $bg-color-quaternary;
+					@media only screen and (max-width: 767px) {
+						padding-left: calc(var(--bs-gutter-x) * 0.5);
+						padding-right: calc(var(--bs-gutter-x) * 0.5);
+					}
+					h3.sidebar-title,
+					h3.sidebar-title a{
+						font-size: $font-size-s;
+						line-height: 1;
+						color: $color-white;
+						font-weight: $font-weight-semibold;
+						margin-bottom: 0px;
+					}
+				}
+				.body{
+					background-color: $bg-color-tertiary;
+					padding: 40px;
+					@media only screen and (max-width: 767px) {
+						padding-left: calc(var(--bs-gutter-x) * 0.5);
+						padding-right: calc(var(--bs-gutter-x) * 0.5);
+					}
+					ul{
+						li{
+							transition: all .3s;
+							transition-timing-function: $smoothInOut;
+							a{
+								font-size: $font-size-xs;
+								line-height: 40px;
+								margin-left: 0px;
+								color: $color-white;
+								transition: all .3s;
+								transition-timing-function: $smoothInOut;
+								svg{
+									transform: rotate(0deg);
+									/* doesn't work as intended in Firefox 
+									* % values are taken relative to the SVG, not the element
+									* which actually seems to be correct */
+									transform-origin: 50% 50%;
+									transition: all .3s;
+									transition-timing-function: $smoothInOut;
+									margin-right: 10px;
+								}
+								&:hover,
+								&:focus{
+									text-decoration: underline;
+									text-decoration-color: $color--primary;
+									cursor: pointer;
+									svg{
+										&.rotate-arrow{
+											transform: rotate(45deg);
+										}
+									}
+								}
+							}
+							&.current_page_item{
+								a{
+									text-decoration: underline;
+									text-decoration-color: $color--primary;
+									cursor: pointer;
+									svg{
+										&.rotate-arrow{
+											transform: rotate(45deg);
+										}
+									}
+								}
+							}
+						}
+						&.careers-listing{
+							li{
+								span{
+									font-size: $font-size-xs;
+									line-height: 40px;
+									margin-left: 10px;
+									color: $color-white;
+									transition: all .3s;
+									transition-timing-function: $smoothInOut;
+								}
+							}
+						}
+					}
+					a.btn{
+						margin-top: 28px;
+					}
+					p{
+						font-size: 18px;
+						line-height: 34px;
+						color: $color-white;
+					}
+					.contact-links{
+						margin-top: 24px;
+						a{
+							font-size: 18px;
+							line-height: 34px;
+							color: $color-white;
+							display: block;
+							text-decoration: underline;
+							text-decoration-color: $color--primary;
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* DEFAULT GENERAL PAGE */
+.page-template-page-general{
+	.header-block{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 500px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media only screen and (max-width: 991px) {
+			height: 400px;
+		}
+		@media only screen and (max-width: 767px) {
+			height: 320px;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-image: linear-gradient(to right, $color--secondary, rgba(255,255,255,0));
+			width: 50%;
+		}
+	}
+}
+
+/* ARCHIVE PAGE */
+.archive{
+	.header-block{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 400px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media only screen and (max-width: 991px) {
+			height: 400px;
+		}
+		@media only screen and (max-width: 767px) {
+			height: 320px;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-image: linear-gradient(to right, $color--secondary, rgba(255,255,255,0));
+			width: 50%;
+		}
+	}
+}
+
+/* SINGLE PAGE */
+.single{
+	.related{
+		background-color: $bg-color-primary;
+		.row{
+			display: flex;
+			align-items: center;
+			padding: 140px 0px;
+			@media only screen and (max-width: 991px) {
+				padding: 100px 0px;
+			}
+			@media only screen and (max-width: 767px) {
+				padding: 80px 0px;
+			}
+			.header-part{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding-top: 0px;
+				padding-bottom: 0px;
+				.left-side{
+					display: flex;
+					justify-content: flex-start;
+					h2{
+						margin-bottom: 0px;
+					}
+				}
+				.right-side{
+					display: flex;
+					justify-content: flex-end;
+					@media only screen and (max-width: 520px) {
+						margin-top: 24px;
+						justify-content: flex-start;
+					}
+					.btn{
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+		.related-posts{
+			padding-top: 60px;
+			padding-bottom: 0px;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			.single-column{
+				display: flex;
+				align-self: stretch;
+				@media only screen and (max-width: 767px) {
+					margin-bottom: calc(var(--bs-gutter-x) * 0.5);
+					&:last-child{
+						margin-bottom: 0px;
+					}
+				}
+				.single-post{
+					position: relative;
+					background-color: $bg-color-white;
+					.featured-image{
+						position: relative;
+						&:before{
+							content: "";
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							display: block;
+							background-color: $bg-color-secondary;
+							opacity: 0.7;
+							transition: all .3s;
+							transition-timing-function: $smoothInOut;
+						}
+						.single-logo{
+							position: relative;
+							height: 80px;
+							width: 100%;
+							max-width: 240px;
+							margin-left: auto;
+							margin-right: auto;
+							display: block;
+							top: calc(50% - 40px);
+						}
+					}
+					.content-part{
+						background-color: $bg-color-white;
+						padding: 30px 30px 70px;
+						
+						.excerpt{
+							font-size: 22px;
+							line-height: 28px;
+							color: $color--secondary;
+							font-weight: $font-weight-semibold;
+						}
+					}
+					svg{
+						position: absolute;
+						left: 30px;
+						bottom: 30px;
+						transform: rotate(0deg);
+						/* doesn't work as intended in Firefox 
+						* % values are taken relative to the SVG, not the element
+						* which actually seems to be correct */
+						transform-origin: 50% 50%;
+						transition: all .3s;
+						transition-timing-function: $smoothInOut;
+						g{
+							fill: $color--secondary;
+						}
+					}
+					&:hover,
+					&:focus{
+						.featured-image{
+							&:before{
+								opacity: 1;
+							}
+						}
+						cursor: pointer;
+						svg{
+							&.rotate-arrow{
+								transform: rotate(45deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* SINGLE CAREER */
+.single-careers{
+	.default-content-section{
+		.content-row{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.single-careers,
+.page-careers{
+	.career-cta{
+		.row{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 140px 0px;
+			@media only screen and (max-width: 991px) {
+				padding: 100px 0px;
+			}
+			@media only screen and (max-width: 767px) {
+				padding: 80px 0px;
+			}
+			h2{
+				font-size: 24px;
+				line-height: 36px;
+				font-weight: $font-weight-normal;
+				color: $color--secondary;
+				margin-bottom: 10px;
+			}
+			.subtitle{
+				font-size: 18px;
+				line-height: 34px;
+				font-weight: $font-weight-normal;
+				color: $color--secondary;
+			}
+			.cta-btn-group{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@media only screen and (max-width: 767px) {
+					flex-direction: column;
+				}
+				a{
+					margin-top: 24px;
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+.page-careers{
+	background-color: $bg-color-white;
+	.career-cta{
+		background-color: $bg-color-white;
+	}
+}
+
+.home{
+	.customer-stories-logos{
+		z-index: 1;
+		margin-top: -140px;
+		z-index: 0;
+		padding: 90px 0px 140px;
+		@media only screen and (max-width: 991px) {
+			margin-top: -80px;
+			padding: 90px 0px 100px;
+		}
+		@media only screen and (max-width: 767px) {
+			margin-top: -80px;
+			padding: 80px 0px 40px;
+		}
+	}
+}

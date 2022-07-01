@@ -1,0 +1,121 @@
+// Bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
+/** Import everything from autoload */
+@import '~include-media/dist/_include-media.scss';
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+@import '~flickity/dist/flickity.min.css';
+
+/**
+ * Base styles
+ */
+ @import "base/colors";
+ @import "base/font-sizes";
+ @import "base/global";
+ @import "base/breakpoints";
+ @import "base/transitions";
+ @import "base/buttons";
+
+/**
+ * Common styles
+ */
+@import "../fonts/fonts";
+@import "common/reset";
+@import "common/hamburger";
+@import "common/404";
+
+
+
+/**
+ * Component styles
+ */
+@import "components/menus";
+@import "components/header";
+@import "components/footer";
+@import "components/sidebar";
+@import "components/forms";
+
+/**
+ * Header Block styles
+ */
+@import "blocks/headers/01_header";
+@import "blocks/headers/02_header";
+@import "blocks/headers/03_header";
+@import "blocks/headers/default_page_header";
+
+/**
+ * Block styles
+ */
+@import "blocks/fullwidth_blocks/01_text_image_block_2column";
+@import "blocks/fullwidth_blocks/02_services_three_column";
+@import "blocks/fullwidth_blocks/03_big_tag_text";
+@import "blocks/fullwidth_blocks/04_devider";
+@import "blocks/fullwidth_blocks/05_counting_numbers";
+@import "blocks/fullwidth_blocks/06_clients_logos";
+@import "blocks/fullwidth_blocks/07_text_image_with_title";
+@import "blocks/fullwidth_blocks/08_info_block";
+@import "blocks/fullwidth_blocks/09_timeline_horizontal";
+@import "blocks/fullwidth_blocks/010_services_slider_list";
+@import "blocks/fullwidth_blocks/011_services_slider_sub_block";
+@import "blocks/fullwidth_blocks/012_cta_with_image";
+@import "blocks/fullwidth_blocks/013_customer_stories_tabs";
+@import "blocks/fullwidth_blocks/014_big_socials";
+@import "blocks/fullwidth_blocks/015_posttype_slider_block";
+
+/**
+ * Single Block styles
+ */
+@import "blocks/single_blocks/_01_single_content_header";
+@import "blocks/single_blocks/_02_single_title_intro_in_column";
+@import "blocks/single_blocks/_03_single_content";
+
+/**
+ * Header Block styles
+ */
+@import "blocks/headers/01_header";
+@import "blocks/headers/02_header";
+@import "blocks/headers/03_header";
+@import "blocks/headers/default_page_header";
+
+/**
+ * Block styles
+ */
+@import "blocks/fullwidth_blocks/01_text_image_block_2column";
+@import "blocks/fullwidth_blocks/02_services_three_column";
+@import "blocks/fullwidth_blocks/03_big_tag_text";
+@import "blocks/fullwidth_blocks/04_devider";
+@import "blocks/fullwidth_blocks/05_counting_numbers";
+@import "blocks/fullwidth_blocks/06_clients_logos";
+@import "blocks/fullwidth_blocks/07_text_image_with_title";
+@import "blocks/fullwidth_blocks/08_info_block";
+@import "blocks/fullwidth_blocks/09_timeline_horizontal";
+@import "blocks/fullwidth_blocks/010_services_slider_list";
+@import "blocks/fullwidth_blocks/011_services_slider_sub_block";
+@import "blocks/fullwidth_blocks/012_cta_with_image";
+@import "blocks/fullwidth_blocks/013_customer_stories_tabs";
+@import "blocks/fullwidth_blocks/014_big_socials";
+@import "blocks/fullwidth_blocks/015_posttype_slider_block";
+
+/**
+ * Single Block styles
+ */
+@import "blocks/single_blocks/_01_single_content_header";
+@import "blocks/single_blocks/_02_single_title_intro_in_column";
+@import "blocks/single_blocks/_03_single_content";
+
+/**
+ * Archive styles
+ */
+@import "archive/_nieuws_archive";
+
+
+
+
+@import "style";

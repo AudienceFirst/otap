@@ -1,0 +1,148 @@
+//
+// Forms
+//------------------------------------------------------------------------------
+
+.nf-before-form-content{
+    display: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color--secondary;
+    font-size: $font-size-xs;
+    line-height: $line-height-ratio-xl;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $color--secondary;
+    font-size: $font-size-xs;
+    line-height: $line-height-ratio-xl;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: $color--secondary;
+    font-size: $font-size-xs;
+    line-height: $line-height-ratio-xl;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $color--secondary;
+    font-size: $font-size-xs;
+    line-height: $line-height-ratio-xl;
+}
+
+/* Overlay footer */
+.form-overlay{
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-family: $theme-font-secondary;
+        font-size: 16px;
+        color: $color-white;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        font-family: $theme-font-secondary;
+        font-size: 16px;
+        color: $color-white;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        font-family: $theme-font-secondary;
+        font-size: 16px;
+        color: $color-white;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        font-family: $theme-font-secondary;
+        font-size: 16px;
+        color: $color-white;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+
+    .nf-error-msg{
+        font-size: 18px;
+        list-style: 1.5;
+        font-family: $theme-font-secondary;
+        text-align: center;
+    }
+    
+    .nf-error.field-wrap .nf-field-element::after{
+        display: none;
+    }
+    .nf-error-required-error,
+    .nf-after-form-content{
+        margin-top: 12px;
+    }
+    .nf-form-wrap{
+        margin-top: 12px;
+        .nf-form-content{
+            position: relative;
+            padding: 0px;
+            @media only screen and (min-width: 768px) {
+                min-width: 460px;
+            }
+            .nf-field-container{
+                margin-bottom: 0px;
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 20px;
+                    &.submit-container{
+                        margin-bottom: 0px;
+                    }
+                }
+                .nf-field-label{
+                    display: none;
+                }
+                input {
+                    position: relative;
+                    background-color: rgba(255,255,255,.2);
+                    border: 2px solid rgba(255,255,255,.5);
+                    padding: 16px 32px;
+                    -webkit-border-radius: 30px; 
+                    -moz-border-radius: 30px; 
+                    border-radius: 30px;
+                    color: $color-white;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 27px;
+                    font-family: $theme-font-secondary;
+                    height: auto;
+                    @media only screen and (max-width: 767px) {
+                        padding: 10px 24px;
+                    }
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                        color: $color-white;
+                    }
+                }
+            }
+            .submit-container {           
+                @media only screen and (min-width: 768px) {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                }
+                @media only screen and (max-width: 767px) {
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                }
+                .submit-wrap {
+                    .nf-field-element {
+                        input{
+                            background-color: $bg-color-white;
+                            border: 2px solid $color-white;
+                            padding: 16px 32px;
+                            color: $color--primary;
+                            font-size: 18px;
+                            line-height: 27px;
+                            height: auto;
+                            @media only screen and (max-width: 767px) {
+                                padding: 10px 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

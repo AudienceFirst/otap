@@ -1,0 +1,537 @@
+//
+// Menus
+//------------------------------------------------------------------------------
+.main-header {
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 1200px) {
+            width: fit-content;
+            padding: 0px;
+        }
+        @media screen and (max-width: 1200px) and (min-width: 992px) {
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+        }
+        
+        .main-nav {
+            @media only screen and (max-width: 1200px) {
+                display: none;
+            }
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+    
+                .menuItem {
+                    margin-right: 36px;
+                    position: relative;
+                    padding: 40px 0 40px 0;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+    
+                    a{
+                        font-family: $theme-font-secondary;
+                        font-size: $font-size-xs;
+                        font-weight: $font-weight-medium;
+                        color: $color--secondary;
+                        transition: all 0.3s ease-in;
+    
+                        &:focus,
+                        &:hover {
+                            color: $color--primary;
+                        }
+                    }
+            
+                    
+                    .submenu {
+                        position: absolute;
+                        z-index: 2;
+                        left: -24px;
+                        top: 96px;
+                        background-color: $color--secondary;
+                        padding: 38px 30px;
+                        color: $color-white;
+                        width: 300px;
+                        margin-left: 0;
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            display: block;
+                            height: 60px;
+                            width: 100%;
+                            opacity: 0.3;
+                            background-image: linear-gradient(179deg, #000000 0%, rgba(0,0,0,0.00) 50%);
+                            z-index: -1;
+                        }
+                        li{
+                            transition: all .3s;
+                            transition-timing-function: $smoothInOut;
+                            padding-left: 30px;
+                            text-indent: -10px;
+                            position: relative;
+                            a {
+                                margin-left: 10px;
+                                color: $color-white;
+                                font-size: 18px;
+                                line-height: 40px;
+                                margin-left: 10px;
+                                color: $color-white;
+                                transition: all .3s;
+                                transition-timing-function: $smoothInOut;
+                            }
+                            svg{
+                                transform: rotate(0deg);
+                                transform-origin: 50% 50%;
+                                transition: all .3s;
+                                transition-timing-function: $smoothInOut;
+                                position: absolute;
+                                top: 14px;
+                                left: 0;
+                            }
+                            &:hover{
+                                cursor: pointer;
+                                svg{
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+            
+                    }
+            
+                    &__cta {
+                        padding: 0;
+                        
+                        a{
+                            background-color: transparent;
+                            border: 2px solid $color--primary;
+                            padding: 12px 32px;
+                            transition: all 0.3s;
+                            color: $color--primary !important;
+                            &:hover,
+                            &:focus {
+                                border: 2px solid $color--primary--hover;
+                                cursor: pointer;
+                                
+                            }
+                        }
+                        &:hover,
+                        &:focus {
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                border-bottom: unset;
+                            }
+                        }
+                    }
+            
+                    &__wpml {
+                        a {
+                            opacity: 0.5;
+                            svg{
+                                path{
+                                    fill: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    // Transparent Menu
+    //------------------------------------------------------------------------------
+    &.transparent {
+        .menu {
+            .main-nav {
+                ul {
+                    .menuItem {
+                        a{
+                            font-family: $theme-font-secondary;
+                            font-size: $font-size-xs;
+                            font-weight: 500;
+                            color: $color-white;
+                            transition: all 0.3s ease-in;
+        
+                            &:focus,
+                            &:hover {
+                                color: $color--off-white;
+                            }
+                        }
+                
+                        .submenu {
+                            background-color: $color--secondary;
+                            color: $color-white;
+                            &:before{
+                                background-image: linear-gradient(179deg, #000000 0%, rgba(0,0,0,0.00) 50%);
+                            }
+                            li{
+                                a {
+                                    color: $color-white;
+                                }   
+                            }
+                        }
+                
+                        &__cta {
+                            a{
+                                border: 2px solid $color-white;
+                                color: $color-white !important;
+                                -webkit-border-radius: 50px;
+                                -moz-border-radius: 50px;
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//
+// Mobile Menu
+//------------------------------------------------------------------------------
+.main-nav__mobile {
+    @media only screen and (min-width: 1200px) {
+        display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        width: 100vw;
+        max-height: 100%;
+        z-index: 9999;
+        background-color: $bg-color-primary;
+        top: 64px;
+
+        &__container {
+            padding: 62px 24px 24px 24px;
+            height: 100%;
+            position: relative;
+
+            .menuItem {
+                margin-bottom: 0;
+                padding: 0;
+                position: relative;
+                transition: all .3s;
+                transition-timing-function: $smoothInOut;  
+                position: relative;
+                overflow: hidden;
+                z-index: 9;
+
+                a {
+                    font-family: $theme-font-secondary;
+                    font-size: 20px;
+                    font-weight: 700;
+                    display: block;
+                    color: $color--secondary;
+                    padding: 20px 32px;
+                    position: relative;
+
+                    i {
+                        position: absolute;
+                        left: 0;
+                        top: 18px;
+                        margin-right: 12px;
+                    }
+                }
+        
+                &.active {
+                    .submenu {
+                        margin-left: 0;
+                        z-index: 10;
+                        .childItem {
+                            transition: all .3s;
+                            transition-timing-function: $smoothInOut;  
+                            a {
+                                color: $color-gray;
+                                font-weight: 400;
+                                padding: 12px 20px 12px 32px;
+                            }
+                            svg{
+                                transition: all .3s;
+                                transition-timing-function: $smoothInOut; 
+                            }
+                            &:hover,
+                            &:focus{
+                                a{
+                                    color: $color--primary;
+                                }
+                                svg{
+                                    transform: rotate(45deg);
+                                    /* doesn't work as intended in Firefox 
+                                    * % values are taken relative to the SVG, not the element
+                                    * which actually seems to be correct */
+                                    transform-origin: 50% 50%;
+                                    g{
+                                        fill: $color--primary;
+                                    }
+                                }
+                            }
+                        }                
+                    }
+                }
+        
+                &__cta {
+                    background-color: $color--primary;
+                    padding: 12px;
+                    padding-left: 0;
+                    margin-right: 0;
+                    transition: all 0.3s;
+                    
+                    a {
+                        color: $color--secondary;
+                        font-weight: 700;
+                        line-height: 26px;
+                    }
+                    &:hover,
+                    &:focus {
+                        background-color: $color--primary--hover;
+                        cursor: pointer;
+                        a{
+                            color: $color--secondary;
+                        }
+                    }
+                }
+        
+                &__wpml {
+                    a {
+                        color: $color-gray;
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            margin-right: 12px;
+                        }
+                    }
+                    &.active {
+
+                        a {
+                            color: $color-gray
+                        }
+                        .childItem {
+                            background-color: $color-white;
+                            a {
+                                color: $color--secondary !important;
+                                transition: all .3s;
+                                transition-timing-function: $smoothInOut; 
+                            }
+                        }
+                    }
+                    .childItem {
+                        background-color: $color-white;
+                        a {
+                            color: $color--secondary;
+                        }
+                    }
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                        a{
+                            color: $color--secondary--hover !important;
+                        }
+                    }
+                }
+            }
+
+            > svg {
+                position: absolute;
+                bottom: 24px;
+                right: 24px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.menu__mobile {
+    li {
+        margin-bottom: 0;
+        padding: 0;
+        position: relative;
+
+        &.btn.menu-btn {
+            background-color: $color--tertiary;
+            width: calc(100% - 36px);
+            margin: 40px 18px 0px 18px;
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            border-radius: 16px;
+            transition: all .3s ease-in-out;
+            &:hover,
+            &:focus{
+                background-color: $color--tertiary-hover;
+            }
+            a {
+                font-size: $font-size-xxs;
+                line-height: 1;
+                color: $color-white !important;
+                justify-content: center;
+            }
+        }
+        a {
+            padding: 10px 0px;
+            font-size: $font-size-xxs;
+            display: flex;
+            justify-content: space-between;            
+        }
+        .drop-arrow {
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            transform: rotate(270deg);
+            height: 8px;
+            width: 12px;
+            path {
+                fill: $color--primary;
+            }
+            &.active {
+                svg {
+                    transform: rotate(-180deg);
+                    background: $color--primary;
+                    color: $color-white;
+                }
+            }
+        }
+        &.submenu-open {
+            > a {
+                background-color: $color--primary;
+                color: $color-white !important;
+                text-decoration: underline;
+            }
+            .drop-arrow {
+                transform: rotate(180deg);
+    
+                path {
+                    fill: $color-white;
+                }
+            }
+        }
+    }
+    .sub-menu {
+        background: $bg-color-primary;
+        padding: 10px 0;
+        width: 100%;
+        position: relative;
+        list-style-type: none;
+        z-index: 1;
+        display: none;
+        li {
+            border-bottom: 0 !important;
+            a{
+                color: $color--primary !important;
+                font-size: $font-size-xs;
+                line-height: 16px;
+                font-family: $theme-font !important;
+                //margin-left: 20px;
+                font-weight: 800;
+            }
+        }
+        &.active {
+            display: block;
+        }
+    }
+}
+
+@include media('<=phone') {
+    .hidemobile {
+        display: none;
+    }
+}
+
+.hamburger{
+    span{
+        font-size: 18px;
+        line-height: 1;
+        color: $color--secondary;
+        font-weight: $font-weight-semibold;
+        margin-right: 4px;
+    }
+    &:hover,
+    &:focus{
+        cursor: pointer;
+    }
+}
+
+header{
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    .container-fluid{
+        .row{
+            padding: 48px 160px 48px 96px;
+            align-items: center;
+            /* MAIN NAV */
+            .main-nav{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                ul{
+                    margin-top: 6px;
+                    display: flex;
+                    li{
+                        font-size: inherit;
+                        line-height: inherit;
+                        &:last-child{
+                            margin-right: 0px;
+                        }
+                        a{
+                            font-weight: $font-weight-bold;
+                            font-size: 24px;
+                            color: #2C1A52;
+                            letter-spacing: 0;
+                            display: inline;
+                            background-image: linear-gradient(120deg, #F46964 0%, #F46964 100%);
+                            background-repeat: no-repeat;
+                            background-size: 0% 3px;
+                            background-position: 0 1.25em;
+                            padding-bottom: 3px;
+                            transition: background-size .3s ease-in;
+                            &:hover,
+                            &:focus{
+                                background-size: 100% 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

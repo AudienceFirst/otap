@@ -1,0 +1,18 @@
+//
+// Transitions
+//------------------------------------------------------------------------------
+$transition-short:     0.2s;
+$transition-medium:    0.5s;
+
+$snappy: cubic-bezier(0.58, 0.3, 0.005, 1);
+$fade: cubic-bezier(0.38, 0.11, 0.24, 0.94);
+$smooth: cubic-bezier(0.555, 0.205, 0.295, 0.975);
+$smoothInOut: cubic-bezier(0.275, 0.42, 0, 1);
+$slide: cubic-bezier(0.8, 0.14, 0.24, 0.99);
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-20px); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}

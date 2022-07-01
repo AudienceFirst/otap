@@ -1,0 +1,78 @@
+/*
+* BACKGROUND COLORS
+*/
+$bg-color-primary: #FAFAF8;
+$bg-color-secondary: #E1EBEB;
+$bg-color-tertiary: #085E4C;
+$bg-color-quaternary: #ffcc00;
+$bg-color-white: #ffffff;
+
+/* 
+* BASE COLOURS
+*/
+$color--primary: #005AE6;      
+$color--secondary: #00264E; 
+$color--tertiary: #A9A9A9;
+$color--quaternary: #228C90;
+$color--quinary: #B2CCC0;
+
+$color--tertiary-hover: #DC6863;
+
+$color--off-white: #E8EFED;
+
+$color--primary-light: #AA8892;
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-white-semitransparent: rgba(255,255,255,0.3);
+$color-white-transparent: rgba(255,255,255,0.1);
+
+/* 
+* BASE COLOURS HOVER
+*/
+$color--primary--hover: #00264E;  
+$color--secondary--hover: #005AE6;  
+
+//
+// Colors
+// -----------------------------------------------------------------------------
+//$color-black:          #30302C;
+$color-white:          #FFFFFF;
+$color-offwhite:       #F9F9FB;
+$color-dark-offwhite:  #F5F5F5;
+$color-darkwhite:      #DDD8E8;
+$color-medium-white:   #EBEBEA;
+$color-dark-gray:      #4F4F4B;
+$color-lightgray:      #A2A29F;
+$color-mediumgray:     #B1B1AF;
+$color-lightergray:    #9D9D9B;
+$color-gray:           #787878;
+$color-lighter-purple: #A392C1;
+$color-lightest-purple:#ECE9F2;
+$color-lightorange:    #EF7D00;
+$color-shadow:         #3C3C37;
+
+
+$color-primary-00:     #30302C;
+$color-primary-01:     #3C3C37;
+$color-primary-02:     #4F4F4B;
+$color-primary-03:     #63635F;
+$color-primary-04:     #767673;
+$color-primary-05:     #9D9D9B;
+$color-primary-06:     #B8B8B7;
+$color-primary-07:     #DBDBDB;
+$color-primary-08:     #EBEBEA;
+$color-primary-09:     #F5F5F5;
+$color-primary-10:     #F9F9F9;
+
+.background-offwhite {
+    background-color: $color--off-white;
+}
+
+
+a{
+    &:hover,
+    &:focus{
+        color: $color--secondary;
+        outline: none!important;
+    }
+}

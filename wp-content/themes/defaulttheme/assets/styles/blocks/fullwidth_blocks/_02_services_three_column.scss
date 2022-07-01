@@ -1,0 +1,71 @@
+.services-three-block{
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        .title-area{
+            margin-bottom: 48px;
+            @media only screen and (min-width: 1301px) {
+                padding: 0px;
+            }
+            h2{
+                margin-bottom: 12px;
+            }
+            .subtitle{
+                color: $color--secondary;
+                display: block;
+                @media only screen and (min-width: 992px) {
+                    font-size: 24px;
+                }
+            }
+        }
+        .service-card {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            align-items: flex-start;
+            @media only screen and (min-width: 1301px) {
+                padding: 0px;
+            }
+            @media only screen and (max-width: 991px) {
+                margin-bottom: 60px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+            img {
+                height: 72px;
+                width: auto;
+                margin-bottom: 24px;
+            }
+            .service-title,
+            .service-desc{
+                width: 100%;
+                @media only screen and (min-width: 1200px) {
+                    max-width: 304px;
+                }
+            }
+            .service-title {
+                color: $color--secondary;
+                margin-bottom: 12px;
+                @media only screen and (min-width: 768px) {
+                    font-size: 32px;
+                }
+            }
+            .service-desc {
+                font-family: $theme-font-secondary;
+                font-size: $font-size-xs;
+                font-weight: 400;
+                color: $color--secondary;
+                line-height: $m-line-height-ratio-l;
+                margin-top: auto;
+            }
+            a{
+                margin-top: 24px;
+            }
+        }
+    } 
+}

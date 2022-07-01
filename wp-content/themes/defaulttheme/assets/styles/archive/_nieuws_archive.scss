@@ -1,0 +1,99 @@
+.nieuws-archive-cover {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media only screen and (max-width: 991px) {
+        padding-top: 0px;
+        padding-bottom: 64px;
+    }
+    .container{
+        .row{
+            &.archive-header{
+                padding-bottom: 48px;
+                @media only screen and (max-width: 991px) {
+                    padding-bottom: 24px;
+                }
+                h2{
+                    margin-bottom: 8px;
+                }
+                .subtitle{
+                    color:$color--secondary;
+                }
+            }
+            a{
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 48px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+                &.single-news{
+                    padding-left: 10px;
+                    padding-left: 10px;
+                }
+                .single-item{
+                    .body-part{
+                        .image{
+                            position: relative;
+                            z-index: 0;
+                            flex: 0 0 auto;
+                            overflow: hidden;
+                            height: 240px;
+                            margin-bottom: 24px;
+                            img{
+                                object-fit: cover;
+                                object-position: center center;
+                                position: absolute;
+                                inset: 0px;
+                                width: 100%;
+                                height: 100%;
+                                transition: transform 250ms ease-in-out 0s;
+                                transform: perspective(1px) scale3d(1, 1, 1);
+                            }
+                        }
+                    }
+                    .content{
+                        .date{
+                            font-family: $theme-font-secondary;
+                            font-size: 16px;
+                            color: $color--primary;
+                            letter-spacing: 0;
+                            line-height: 24px;
+                            margin-bottom: 8px;
+                        }
+                        h3{
+                            font-family: $theme-font;
+                            font-size: 24px;
+                            color: $color--secondary;
+                            letter-spacing: 0;
+                            line-height: 32px;
+                            margin-bottom: 16px;
+                        }
+                        .excerpt{
+                            font-family: $theme-font-secondary;
+                            font-size: 18px;
+                            color: $color--secondary;
+                            letter-spacing: 0;
+                            line-height: 27px;
+                        }
+                    }
+                    &:hover,
+                    &:focus{
+                        .body-part{
+                            .image{
+                                img{
+                                    transform: perspective(1px) scale3d(1.04, 1.04, 1.04);
+                                }
+                            }
+                        }
+                        .content{
+                            h3{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

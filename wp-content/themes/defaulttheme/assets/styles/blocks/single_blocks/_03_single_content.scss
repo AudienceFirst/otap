@@ -1,0 +1,257 @@
+.single_content_03 {
+    .container{
+        @media only screen and (min-width: 992px) {
+            padding: 0px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            padding-bottom: 120px;
+            @media only screen and (max-width: 991px) {
+                padding-bottom: 92px;
+            }
+            @media only screen and (max-width: 767px) {
+                padding-bottom: 64px;
+            }
+            .single-column-block{
+                margin-bottom: 64px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+                .column-wrapper{
+                    article{
+                        max-width: 615px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 100%;;
+                        &.full-width{
+                            max-width: 715px;
+                            margin-right: auto;
+                            margin-left: inherit;
+                        }
+                        &.image{
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        &.video{
+                            .video-container{
+                                position: relative;
+                                overflow: hidden;
+                                width: 100%;
+                                padding-top: 56.25%;
+                                iframe{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                        &.content-block{
+                            .textarea{
+                                p{
+                                    font-family: $theme-font-secondary;
+                                    color: #787878;
+                                    letter-spacing: 0;
+                                    a{
+                                        color: $color--primary;
+                                        text-decoration: underline;
+                                        font-family: $theme-font-secondary;
+                                        font-weight: 400;
+                                        &:hover,
+                                        &:focus{
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                            ul{
+                                margin-top: 36px;
+                                
+                                li{
+                                    margin-bottom: 12px;
+                                    display: inline-block;
+                                    font-family: $theme-font-secondary;
+                                    font-size: 20px;
+                                    color: #787878;
+                                    letter-spacing: 0;
+                                    line-height: 30px;
+                                    text-indent: -37px;
+                                    padding-left: 37px;
+                                    @media only screen and (max-width: 991px) {
+                                        font-size: 18px;
+                                        line-height: 1.5;
+                                        svg{
+                                            margin-top: -2px;
+                                        }
+                                    }
+                                    @media only screen and (max-width: 767px) {
+                                        font-size: 16px;
+                                    }
+                                
+                                    &:last-child{
+                                        margin-bottom: 0px;
+                                    }
+                                    svg{
+                                        margin-right: 12px;
+                                    }
+                                }
+                                &.two-columns{
+                                    columns: 2;
+                                    -webkit-columns: 2;
+                                    -moz-columns: 2;
+                                    li{
+                                        width: 50%;
+                                        @media only screen and (max-width: 520px) {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            @media only screen and (max-width: 767px) {
+                                ul{
+                                    &.two-columns{
+                                        columns: 1;
+                                        -webkit-columns: 1;
+                                        -moz-columns: 1;
+                                        li{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            .btn{
+                                margin-top: 40px;
+                            }
+                            .contactform{
+                                margin-top: 48px;
+                                .nf-form-title{
+                                    display: none;
+                                }
+                                .nf-form-content{
+                                    padding: 0px;
+                                    .nf-field-container{
+                                        margin-bottom: 24px;
+                                        label{
+                                            font-family: $theme-font;
+                                            font-size: 24px;
+                                            color: $color--secondary;
+                                            letter-spacing: 0;
+                                            line-height: 32px;
+                                            font-weight: 600;
+                                            span{
+                                                font-family: $theme-font;
+                                                font-size: 24px;
+                                                color: $color--secondary;
+                                                letter-spacing: 0;
+                                                line-height: 32px;
+                                                font-weight: 600;
+                                                color: $color--primary;
+                                            }
+                                        }
+                                        .html-wrap{
+                                            margin-top: 32px;
+                                            display: block;
+                                            .nf-field-element{
+                                                font-family: $theme-font-secondary;
+                                                font-size: 20px;
+                                                color: #787878;
+                                                letter-spacing: 0;
+                                                line-height: 30px;
+                                                a{
+                                                    color: $color--primary;
+                                                    text-decoration: underline;
+                                                    &:hover,
+                                                    &:focus{
+                                                        text-decoration: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.checkbox-container{
+                                            .checkbox-wrap{
+                                                label{
+                                                    font-family: $theme-font-secondary;
+                                                    font-size: 20px;
+                                                    color: #787878;
+                                                    letter-spacing: 0;
+                                                    line-height: 30px;
+                                                    font-weight: 400;
+                                                    margin-left: 32px;
+                                                    a{
+                                                        color: $color--primary;
+                                                        text-decoration: underline;
+                                                        &:hover,
+                                                        &:focus{
+                                                            text-decoration: none;
+                                                        }
+                                                    }
+                                                    &:before{
+                                                        font-size: 16px;
+                                                        left: -28px;
+                                                        top: 2px;
+                                                        color: $color--secondary;
+                                                    }
+                                                    &:after{
+                                                        background: $bg-color-white;
+                                                        border: 1px solid rgba(120,120,120,0.24);
+                                                        height: 24px;
+                                                        width: 24px;
+                                                        display: block;
+                                                        left: -32px;
+                                                        top: 4px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        input:not([type='button']),
+                                        select,
+                                        textarea{
+                                            background: $bg-color-white;
+                                            border: 1px solid rgba(120,120,120,0.24);
+                                            font-family: $theme-font-secondary;
+                                            font-size: 18px;
+                                            color: $color--secondary;
+                                            letter-spacing: 0;
+                                            line-height: 27px;
+                                            &:focus{
+                                                border: 1px solid $color--primary;
+
+                                            }
+                                        }
+                                        input[type='button']{
+                                            background: $color--primary;
+                                            border-radius: 30px;
+                                            font-family: $theme-font-secondary;
+                                            font-size: 18px;
+                                            color: $color-white;
+                                            letter-spacing: 0;
+                                            text-align: center;
+                                            line-height: 26px;
+                                            font-weight: 700;
+                                            padding: 16px 32px;
+                                            height: auto;
+                                            margin-top: 24px;
+                                        }
+                                        .nf-after-field .nf-error-msg{
+                                            margin-top: 8px;
+                                            font-family: $theme-font-secondary;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
