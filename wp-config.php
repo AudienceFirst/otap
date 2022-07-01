@@ -18,6 +18,10 @@
  * @package WordPress
  */
 
+/**
+ * test
+ */
+
 $url =  "{$_SERVER['HTTP_HOST']}";
 if ($url == "defaulttheme.test") {
 	define( 'WP_HOME', 'https://defaulttheme.test' );
