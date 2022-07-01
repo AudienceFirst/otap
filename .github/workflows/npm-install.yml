@@ -10,3 +10,5 @@ jobs:
           node-version: '14'
       - run: npm install
         working-directory: wp-content/themes/defaulttheme/
+      - run: npm run dev
+        working-directory: wp-content/themes/defaulttheme/
