@@ -8,7 +8,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - name: npm install
+      - uses: bahmutov/npm-install@v1
+        with:
+          working-directory: ./wp-content/themes/defaulttheme/
+      - run: npm t
         working-directory: ./wp-content/themes/defaulttheme/
-        run: |
-          npm ci
