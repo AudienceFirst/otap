@@ -12,7 +12,7 @@ mix
 if (!mix.inProduction()) {
   mix.webpackConfig({ devtool: "inline-source-map" })
   mix.browserSync({
-    proxy: "https://www.versteijnen.test",
+    proxy: "https://www.otap.test",
     open: true,
     notify: false,
     files: ["dist/styles/**/*.css", "dist/scripts/**/*.js", "**/*.php"],

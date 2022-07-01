@@ -23,12 +23,12 @@
  */
 
 $url =  "{$_SERVER['HTTP_HOST']}";
-if ($url == "defaulttheme.test") {
-	define( 'WP_HOME', 'https://defaulttheme.test' );
-	define( 'WP_SITEURL', 'https://defaulttheme.test' );
+if ($url == "otap.test") {
+	define( 'WP_HOME', 'https://otap.test' );
+	define( 'WP_SITEURL', 'https://otap.test' );
 } else {
-	define( 'WP_HOME', 'https://defaulttheme.inthemake.nl' );
-	define( 'WP_SITEURL', 'https://defaulttheme.inthemake.nl' );
+	define( 'WP_HOME', 'https://otap.inthemake.nl' );
+	define( 'WP_SITEURL', 'https://otap.inthemake.nl' );
 }
 
 
