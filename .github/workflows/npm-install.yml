@@ -10,3 +10,12 @@ jobs:
           node-version: '14'
       - run: npm install
         working-directory: wp-content/themes/defaulttheme/
+  npm-run-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm run build
+        working-directory: wp-content/themes/defaulttheme/
