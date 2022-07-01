@@ -1,4 +1,4 @@
-name: npm-install
+name: npm-install-and-build
 on: [push, pull_request]
 jobs:
   npm-install-and-build:
