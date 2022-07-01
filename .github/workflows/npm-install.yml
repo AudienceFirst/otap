@@ -1,7 +1,7 @@
-name: npm-install-and-build
+name: npm-install
 on: [push, pull_request]
 jobs:
-  npm-install-and-build:
+  npm-install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
